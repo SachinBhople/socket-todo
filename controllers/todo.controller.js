@@ -5,6 +5,8 @@ const { io } = require("../socket/socket")
 
 exports.getAlltodo = asyncHandler(async (req, res) => {
     const result = await Todo.find()
+    console.log(result);
+
     res.json({ message: "todo fetch succes", result })
 })
 exports.createTodo = asyncHandler(async (req, res) => {
